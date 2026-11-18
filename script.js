@@ -86,7 +86,7 @@ function setupSlider() {
   var prevBtn = document.getElementById("prevBtn");
   var nextBtn = document.getElementById("nextBtn");
 
-  var AUTO_DELAY = 2000; // ms each slide stays (change this to go faster or slower)
+  var AUTO_DELAY = 4000; // ms each slide stays (change this to go faster or slower)
   var current = 0;
   var timer = null;
 
