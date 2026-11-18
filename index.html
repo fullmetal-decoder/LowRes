@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LowRes plans trips to Japan, Germany, London and more.">
+  <title>LowRes | Travel and Tours</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#top" aria-label="LowRes home">
+      <!-- Placeholder logo: a pixelated globe -->
+      <svg class="brand-logo" viewBox="0 0 7 7" width="40" height="40" aria-hidden="true" shape-rendering="crispEdges">
+        <rect x="2" y="0" width="3" height="1"/>
+        <rect x="1" y="1" width="5" height="1"/>
+        <rect x="0" y="2" width="7" height="3"/>
+        <rect x="1" y="5" width="5" height="1"/>
+        <rect x="2" y="6" width="3" height="1"/>
+        <rect class="logo-cut" x="3" y="1" width="1" height="5"/>
+        <rect class="logo-cut" x="1" y="3" width="5" height="1"/>
+      </svg>
+      <span class="brand-name">LowRes</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">
+      Menu
+    </button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Main">
+      <ul>
+        <li><a href="#top">Home</a></li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-btn" aria-expanded="false" aria-haspopup="true">
+            Destinations
+          </button>
+          <ul class="dropdown">
+            <li><a href="#destinations">Japan</a></li>
+            <li><a href="#destinations">Germany</a></li>
+            <li><a href="#destinations">London</a></li>
+            <li><a href="#destinations">Iceland</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a class="nav-cta" href="#book">Book a trip</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO SLIDER ============ -->
+    <section class="hero" aria-label="Featured destinations">
+      <div class="slider" id="slider">
+        <div class="slides" id="slides">
+
+          <article class="slide slide-japan">
+            <div class="slide-text">
+              <h1>Japan</h1>
+              <p>Cherry blossoms in Kyoto, neon nights in Tokyo, and ramen at midnight.</p>
+              <a class="btn" href="#book">Plan Japan</a>
+            </div>
+          </article>
+
+          <article class="slide slide-germany">
+            <div class="slide-text">
+              <h2>Germany</h2>
+              <p>Castles on the Rhine, Berlin street art, and Christmas markets in Nuremberg.</p>
+              <a class="btn" href="#book">Plan Germany</a>
+            </div>
+          </article>
+
+          <article class="slide slide-london">
+            <div class="slide-text">
+              <h2>London</h2>
+              <p>Walk the Thames, catch a West End show, and eat your way through Borough Market.</p>
+              <a class="btn" href="#book">Plan London</a>
+            </div>
+          </article>
+
+          <article class="slide slide-iceland">
+            <div class="slide-text">
+              <h2>Iceland</h2>
+              <p>Waterfalls, black sand beaches, and a night sky full of northern lights.</p>
+              <a class="btn" href="#book">Plan Iceland</a>
+            </div>
+          </article>
+
+        </div>
+
+        <button class="slider-btn prev" id="prevBtn" aria-label="Previous destination">&#8249;</button>
+        <button class="slider-btn next" id="nextBtn" aria-label="Next destination">&#8250;</button>
+
+        <div class="dots" id="dots" role="tablist" aria-label="Choose destination"></div>
+      </div>
+    </section>
+
+    <!-- ============ DESTINATIONS ============ -->
+    <section class="section" id="destinations">
+      <h2 class="section-title">Where to next?</h2>
+      <p class="section-intro">Pick a place and we handle the flights, stays, and the schedule.</p>
+
+      <div class="card-grid">
+        <figure class="card">
+          <div class="card-art art-japan" role="img" aria-label="Placeholder for a Japan photo"></div>
+          <figcaption>
+            <h3>Japan</h3>
+            <p>7 days from $1,450</p>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <div class="card-art art-germany" role="img" aria-label="Placeholder for a Germany photo"></div>
+          <figcaption>
+            <h3>Germany</h3>
+            <p>6 days from $1,180</p>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <div class="card-art art-london" role="img" aria-label="Placeholder for a London photo"></div>
+          <figcaption>
+            <h3>London</h3>
+            <p>5 days from $990</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ PACKAGES (table) ============ -->
+    <section class="section section-alt" id="packages">
+      <h2 class="section-title">Packages</h2>
+      <p class="section-intro">Every package includes flights, hotel, and a local guide.</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>Compare our three most popular trips</caption>
+          <thead>
+            <tr>
+              <th scope="col">Trip</th>
+              <th scope="col">Length</th>
+              <th scope="col">Best season</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Japan Classic</th>
+              <td>7 days</td>
+              <td>March to May</td>
+              <td>$1,450</td>
+            </tr>
+            <tr>
+              <th scope="row">Germany Castles</th>
+              <td>6 days</td>
+              <td>May to September</td>
+              <td>$1,180</td>
+            </tr>
+            <tr>
+              <th scope="row">London Weekender</th>
+              <td>5 days</td>
+              <td>All year</td>
+              <td>$990</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <h2 class="section-title">About LowRes</h2>
+      <div class="about-grid">
+        <p>
+          We started LowRes because trip planning felt like a hundred open tabs.
+          Now one team builds your whole itinerary, so you spend less time
+          comparing and more time going.
+        </p>
+        <details>
+          <summary>What does the name mean?</summary>
+          <p>Low resolution is what you get from a screen. We would rather you see it in full detail, in person.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING FORM ============ -->
+    <section class="section section-alt" id="book">
+      <h2 class="section-title">Book a trip</h2>
+      <p class="section-intro">Tell us where and when. We reply within one day.</p>
+
+      <form class="booking" id="bookingForm" novalidate>
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" placeholder="Juan Dela Cruz" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="destination">Destination</label>
+        <select id="destination" name="destination" required>
+          <option value="">Choose a place</option>
+          <option>Japan</option>
+          <option>Germany</option>
+          <option>London</option>
+          <option>Iceland</option>
+        </select>
+
+        <label for="date">Travel date</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="travelers">Travelers: <output id="travelersOut">2</output></label>
+        <input type="range" id="travelers" name="travelers" min="1" max="10" value="2">
+
+        <button class="btn" type="submit">Send request</button>
+        <p class="form-message" id="formMessage" role="status"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">LowRes</p>
+        <p>Travel and tours for people who would rather be there.</p>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <address>
+          hello@lowres.example<br>
+          +63 900 000 0000<br>
+          Cebu City, Philippines
+        </address>
+      </div>
+
+      <div>
+        <h3>Follow us</h3>
+        <ul class="socials">
+          <li><a href="#" aria-label="Facebook">Facebook</a></li>
+          <li><a href="#" aria-label="Instagram">Instagram</a></li>
+          <li><a href="#" aria-label="TikTok">TikTok</a></li>
+          <li><a href="#" aria-label="YouTube">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="copyright">&copy; <span id="year">2026</span> LowRes. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
