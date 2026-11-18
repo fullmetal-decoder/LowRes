@@ -244,7 +244,7 @@ img, svg {
   display: flex;
   height: 100%;
   /* Slow, smooth slide. JS moves this with translateX */
-  transition: transform 1.8s cubic-bezier(0.65, 0, 0.35, 1);
+  transition: transform 1.0s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .slide {
